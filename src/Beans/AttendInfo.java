@@ -8,7 +8,7 @@ public class AttendInfo {
 	private String lectureCode;
 	private String lectureName;
 	private String stringName;
-	private boolean attendCheck; // true �⼮, false �Ἦ 
+	private boolean attendCheck; // true �⼮, false �Ἦ 
 	private Calendar date;
 	
 	
@@ -33,6 +33,10 @@ public class AttendInfo {
 		
 	}
 	
+	public void voidFunction()
+	{
+		System.out.println("Test");
+	}
 	public String getLectureName() {
 		return lectureName;
 	}
