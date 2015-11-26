@@ -15,16 +15,16 @@ public class StudentManagementView implements StudentManagement {
 		
 		ioHandler ioh = new ioHandler();
 		
-		ioh.putString("------------------ÇÐ¿ø»ý ¸ñ·Ï------------------\r\n");
-		ioh.putString("ÀÌ¸§\t");
-		ioh.putString("ÇÐ¿ø»ý ÄÚµå\t\t");
-		ioh.putString("±¸ºÐ\t");
-		ioh.putString("ÀüÈ­¹øÈ£\t");
-		ioh.putString("ÇöÀç ¼ö°­°ú¸ñ\t");
-		ioh.putString("ºñ°í\r\n");
+		ioh.putString("------------------ï¿½Ð¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½------------------\r\n");
+		ioh.putString("ï¿½Ì¸ï¿½\t");
+		ioh.putString("ï¿½Ð¿ï¿½ï¿½ï¿½ ï¿½Úµï¿½\t\t");
+		ioh.putString("ï¿½ï¿½ï¿½ï¿½\t");
+		ioh.putString("ï¿½ï¿½È­ï¿½ï¿½È£\t");
+		ioh.putString("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\t");
+		ioh.putString("ï¿½ï¿½ï¿½\r\n");
 		for( int i = 0 ; i < studentList.size(); i++ )
 		{
-			ioh.putStudent(studentList.get(i));
+			ioh.putStudent(studentList.get(i));   
 		}
 		
 		
@@ -33,7 +33,7 @@ public class StudentManagementView implements StudentManagement {
 	public String getStudentCode()
 	{
 		ioHandler ioh = new ioHandler();
-		System.out.print("----ÇÐ»ý ÄÚµå ÀÔ·Â ----\n ÀÔ·Â : ");
+		System.out.print("----ï¿½Ð»ï¿½ ï¿½Úµï¿½ ï¿½Ô·ï¿½ ----\n ï¿½Ô·ï¿½ : ");
 		return ioh.getString();
 		
 	}
@@ -45,30 +45,30 @@ public class StudentManagementView implements StudentManagement {
 		ioHandler ioh = new ioHandler();
 		
 		
-		ioh.putString("----------ÇÐ»ý µî·Ï ÆäÀÌÁö----------\r\n");
-		ioh.putString("±¸ºÐ(1-ÁßÇÐ»ý,2-°íµîÇÐ»ý): ");
+		ioh.putString("----------ï¿½Ð»ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½----------\r\n");
+		ioh.putString("ï¿½ï¿½ï¿½ï¿½(1-ï¿½ï¿½ï¿½Ð»ï¿½,2-ï¿½ï¿½ï¿½ï¿½Ð»ï¿½): ");
 		int divCode = ioh.getInteger() ;
 		
-		ioh.putString("\r\nÇÐ»ýÄÚµå: ");
+		ioh.putString("\r\nï¿½Ð»ï¿½ï¿½Úµï¿½: ");
 		String studentCode = ioh.getString();
 		
-		ioh.putString("\r\nÇÐ»ýÀÌ¸§: ");
+		ioh.putString("\r\nï¿½Ð»ï¿½ï¿½Ì¸ï¿½: ");
 		String name= ioh.getString();
 		
-		ioh.putString("\r\n¼ºº°: ");
+		ioh.putString("\r\nï¿½ï¿½ï¿½ï¿½: ");
 		String sex= ioh.getString();
 		
-		ioh.putString("\r\nº¸È£ÀÚ ÀüÈ­¹øÈ£ :");
+		ioh.putString("\r\nï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½È£ :");
 		String parentPhoen= ioh.getString();
 		
-		ioh.putString("\r\n»ýÀÏ : ");
+		ioh.putString("\r\nï¿½ï¿½ï¿½ï¿½ : ");
 		String birthDay= ioh.getString();
 		
 		Student s = null;
 		if( divCode == 2 ) // 2 is highschool student
 		{
 			String aff;
-			ioh.putString("\r\n°è¿­: ");
+			ioh.putString("\r\nï¿½è¿­: ");
 			aff = ioh.getString();
 			s = new HighschoolStudent(divCode, studentCode, name, sex, parentPhoen, birthDay, aff); 
 			
